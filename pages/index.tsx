@@ -1,4 +1,3 @@
-// @ts-ignore
 import type { NextPage } from "next";
 import { MutableRefObject, RefObject, useLayoutEffect, useRef } from "react";
 import styles from "../styles/Home.module.css";
@@ -23,7 +22,7 @@ const Home = ({ results }: { results: string }) => {
   const parsed = results.split("###");
 
   let paths: number[] = [];
-  let texts: string[] = [];
+  let texts: string = "";
   parsed.forEach((thing) => {
     let example = thing.split("\n");
     if (
@@ -41,7 +40,7 @@ const Home = ({ results }: { results: string }) => {
 
     let textHere = results.substring(currentIndex, nextIndex);
 
-    texts.push(textHere);
+    texts += textHere;
   });
 
   console.log(texts);
