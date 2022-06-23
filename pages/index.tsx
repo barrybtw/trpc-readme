@@ -1,3 +1,4 @@
+// @ts-ignore
 import type { NextPage } from "next";
 import { MutableRefObject, RefObject, useLayoutEffect, useRef } from "react";
 import styles from "../styles/Home.module.css";
